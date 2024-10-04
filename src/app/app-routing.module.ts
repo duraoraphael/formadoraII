@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'api',
+    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule)
+  },
+  {
+    path: 'page3',
+    loadChildren: () => import('./page3/page3.module').then( m => m.Page3PageModule)
+  },
 ];
 
 @NgModule({
